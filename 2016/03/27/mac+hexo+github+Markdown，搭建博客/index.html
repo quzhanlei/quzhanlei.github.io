@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>mac+hexo+github+Markdown，搭建博客 | jonemill的技术博客</title>
+  <title>mac+hexo+github搭建博客 | jonemill的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="#mac+hexo+github+Markdown，搭建博客一直以来，自己不断更换博客。用过的博客有网易，新浪，csdn，博客园，甚至还用过qq空间，还用过有道云笔记，微软onenote等等。每次迁移都是因为对自己的博客不满意，感觉自己的博客质量太差。有的博客内容仅仅是学习重点摘要，有的博客文章全篇都是摘录别人的，有的文章全是代码.
 -
 ######因此给自己定下规矩：1.在这个博客中，禁止大量摘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac+hexo+github+Markdown，搭建博客">
+<meta property="og:title" content="mac+hexo+github搭建博客">
 <meta property="og:url" content="http://yoursite.com/2016/03/27/mac+hexo+github+Markdown，搭建博客/index.html">
 <meta property="og:site_name" content="jonemill的技术博客">
 <meta property="og:description" content="#mac+hexo+github+Markdown，搭建博客一直以来，自己不断更换博客。用过的博客有网易，新浪，csdn，博客园，甚至还用过qq空间，还用过有道云笔记，微软onenote等等。每次迁移都是因为对自己的博客不满意，感觉自己的博客质量太差。有的博客内容仅仅是学习重点摘要，有的博客文章全篇都是摘录别人的，有的文章全是代码.
 -
 ######因此给自己定下规矩：1.在这个博客中，禁止大量摘">
-<meta property="og:updated_time" content="2016-03-27T15:39:23.000Z">
+<meta property="og:updated_time" content="2016-03-27T15:49:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac+hexo+github+Markdown，搭建博客">
+<meta name="twitter:title" content="mac+hexo+github搭建博客">
 <meta name="twitter:description" content="#mac+hexo+github+Markdown，搭建博客一直以来，自己不断更换博客。用过的博客有网易，新浪，csdn，博客园，甚至还用过qq空间，还用过有道云笔记，微软onenote等等。每次迁移都是因为对自己的博客不满意，感觉自己的博客质量太差。有的博客内容仅仅是学习重点摘要，有的博客文章全篇都是摘录别人的，有的文章全是代码.
 -
 ######因此给自己定下规矩：1.在这个博客中，禁止大量摘">
@@ -62,9 +62,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      mac+hexo+github+Markdown，搭建博客
+      mac+hexo+github搭建博客
     </h1>
   
 
@@ -146,7 +146,7 @@
 </blockquote>
 <p>##3.新建文章<br>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来</p>
 <ul>
-<li>新建一篇文章,<strong>然后通过markdown软件进行操作</strong>。</li>
+<li>新建一篇文章，生成的md文件就在source文件下的_posts的文件夹里。<strong>然后就可以通过markdown软件进行操作</strong>。</li>
 <li>生成静态文件，就是生成public文件夹的东西</li>
 <li>发布草稿（一般不用）</li>
 <li>启动本地服务器。默认情况下，访问网址为：<a href="http://localhost:4000/。" target="_blank" rel="external">http://localhost:4000/。</a></li>
@@ -159,12 +159,12 @@
 <p>deploy:<br> type: git<br> repo: <a href="https://github.com/quzhanlei/quzhanlei.github.io.git" target="_blank" rel="external">https://github.com/quzhanlei/quzhanlei.github.io.git</a><br> branch: master<br> message:</p>
 </blockquote>
 <p>部署到服务器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>##5.多次发表文章<br>首先通过markdown制作md文件，存到source文件下的_posts的文件夹下。<br>然后执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p>##5.多次发表文章<br>首先通过markdown制作md文件，模式跟其他md文件一样。存到source文件下的_posts的文件夹下。<br>然后在自己folder文件夹neededfile下执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/27/mac+hexo+github+Markdown，搭建博客/" data-id="cimaqerls0002t9s6l1ehz327" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/27/mac+hexo+github+Markdown，搭建博客/" data-id="cimaqr6190001xxs632s984ws" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -174,9 +174,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2016/03/27/testpostname/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">testpostname001</div>
+    <a href="/2016/03/27/欢迎使用Markdown编辑器写博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">欢迎使用Markdown编辑器写博客</div>
     </a>
   
 </nav>
@@ -208,16 +208,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2016/03/27/mac+hexo+github+Markdown，搭建博客/">mac+hexo+github+Markdown，搭建博客</a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/27/testpostname/">testpostname001</a>
+            <a href="/2016/03/27/mac+hexo+github+Markdown，搭建博客/">mac+hexo+github搭建博客</a>
           </li>
         
           <li>
@@ -241,7 +237,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 jonemill的技术博客<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
