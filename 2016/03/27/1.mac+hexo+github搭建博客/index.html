@@ -1,0 +1,709 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="一直以来，自己不断更换博客。用过的博客有网易，新浪，csdn，博客园，甚至还用过qq空间，还用过有道云笔记，微软onenote等等。每次迁移都是因为对自己的博客不满意，感觉自己的博客质量太差。有的博客内容仅仅是学习重点摘要，有的博客文章全篇都是摘录别人的，有的文章全是代码.
+–
+因此给自己定下规矩：1.在这个博客中，禁止大量摘录别人的东西，甚至全篇抄袭，可以引用别人的网址。
+2.必须所有的东西都必">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1. mac+hexo+github搭建博客">
+<meta property="og:url" content="http://yoursite.com/2016/03/27/1.mac+hexo+github搭建博客/index.html">
+<meta property="og:site_name" content="jonemill的技术博客">
+<meta property="og:description" content="一直以来，自己不断更换博客。用过的博客有网易，新浪，csdn，博客园，甚至还用过qq空间，还用过有道云笔记，微软onenote等等。每次迁移都是因为对自己的博客不满意，感觉自己的博客质量太差。有的博客内容仅仅是学习重点摘要，有的博客文章全篇都是摘录别人的，有的文章全是代码.
+–
+因此给自己定下规矩：1.在这个博客中，禁止大量摘录别人的东西，甚至全篇抄袭，可以引用别人的网址。
+2.必须所有的东西都必">
+<meta property="og:updated_time" content="2016-03-28T04:28:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1. mac+hexo+github搭建博客">
+<meta name="twitter:description" content="一直以来，自己不断更换博客。用过的博客有网易，新浪，csdn，博客园，甚至还用过qq空间，还用过有道云笔记，微软onenote等等。每次迁移都是因为对自己的博客不满意，感觉自己的博客质量太差。有的博客内容仅仅是学习重点摘要，有的博客文章全篇都是摘录别人的，有的文章全是代码.
+–
+因此给自己定下规矩：1.在这个博客中，禁止大量摘录别人的东西，甚至全篇抄袭，可以引用别人的网址。
+2.必须所有的东西都必">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 1. mac+hexo+github搭建博客 | jonemill的技术博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">jonemill的技术博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">技术文章每周更新</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                1. mac+hexo+github搭建博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-27T23:30:17+08:00" content="2016-03-27">
+              2016-03-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一直以来，自己不断更换博客。用过的博客有网易，新浪，csdn，博客园，甚至还用过qq空间，还用过有道云笔记，微软onenote等等。每次迁移都是因为对自己的博客不满意，感觉自己的博客质量太差。有的博客内容仅仅是学习重点摘要，有的博客文章全篇都是摘录别人的，有的文章全是代码.</p>
+<p>–</p>
+<h4 id="因此给自己定下规矩："><a href="#因此给自己定下规矩：" class="headerlink" title="因此给自己定下规矩："></a><strong>因此给自己定下规矩</strong>：</h4><p>1.在这个博客中，禁止大量摘录别人的东西，甚至全篇抄袭，可以引用别人的网址。</p>
+<p>2.必须所有的东西都必须原创，将那些杂七杂八的文章都写在其他博客上。</p>
+<p>3.每次想好开一个系列，必须把这个系列写完。</p>
+<p>4.文章必须自己看着舒服，别人看着也舒服，自己若干年后再看自己的博客还会很开心。</p>
+<p>5.每周必须写一篇博客。</p>
+<p>6.这次博客必须系统化,不能东一榔头，西一榔头地写。这点非常重要，决定了自己会不会喜欢自己的博客。</p>
+<p>7.这个博客的内容不在于多，而在于精。</p>
+<p>8.博客的技术最好都引用官方博客，即使看别人写的也要注意看他从哪里引来的。</p>
+<p>9.记录自己的学习过程。</p>
+<p>–</p>
+<h4 id="配置安装开始之前："><a href="#配置安装开始之前：" class="headerlink" title="配置安装开始之前："></a><strong>配置安装开始之前</strong>：</h4><p> 安装hexo以及配置github花了2天的时间，现在我把我按照官方的方法走的过程记录下。仅作参考，因为随着hexo版本的更新，一些命令之类的可能会变。</p>
+<h6 id="安装任何环境及软件的基本方法"><a href="#安装任何环境及软件的基本方法" class="headerlink" title="安装任何环境及软件的基本方法:"></a>安装任何环境及软件的基本方法:</h6><p>第一反应按照官方的的步骤走。官方，官方，官方，重要的事说三遍。有的需要自备梯子，我用的vpn是免费的GreenVPN(<a href="https://www.getgreenjsq.com/user-xianlu.html" target="_blank" rel="external">官网</a>)。</p>
+<p>第二若果发现还是下载不下来的话，就看看有没有国内的镜像。国内网站记得看版本是不是最新的。</p>
+<p>第三终端权限不够加sudo。</p>
+<p>第三如果这条路还走不下去，就试着重新换种方法，环境，或者放弃重新选条路。</p>
+<p>–<br>作者2012年的的博客  <a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="external">Hexo 颯爽登場</a>.记录着hexo起源历史。</p>
+<p>欢迎大家去官网 <a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>! 查看帮助文档 <a href="https://hexo.io/zh-cn/docs/index.html/" target="_blank" rel="external">documentation</a>. 当操作的时候发现问题，你可能会从hexo的网站下的  <a href="https://hexo.io/zh-cn/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> 找到解决办法。或者你可以个去 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>问作者Tommy Chen。</p>
+<h2 id="1-安装："><a href="#1-安装：" class="headerlink" title="1.安装："></a>1.安装：</h2><h3 id="安装前提："><a href="#安装前提：" class="headerlink" title="安装前提："></a>安装前提：</h3><ul>
+<li><p>下载hexo软件配置本地环境，在本地形成本地的静态网页。</p>
+</li>
+<li><p>将本地的静态网页通过github软件同步到github上面。</p>
+</li>
+<li><p>从浏览器就可以看到自己的github的网页了。</p>
+</li>
+</ul>
+<h3 id="安装github"><a href="#安装github" class="headerlink" title="安装github"></a>安装github</h3><h3 id="安装note-js"><a href="#安装note-js" class="headerlink" title="安装note.js"></a>安装note.js</h3><h3 id="安装markdown"><a href="#安装markdown" class="headerlink" title="安装markdown"></a>安装markdown</h3><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="2-建站"><a href="#2-建站" class="headerlink" title="2.建站"></a>2.建站</h2><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<p>注意：<br>下面的&lt; folder &gt; 自己写，我这里写的是 “neededfile”.<br>init 是新建网站。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后，”neededfile”的目录如下：</p>
+<p>config.yml<br>package.json<br>scaffolds<br>source<br>themes</p>
+<p>–</p>
+<p>source资源文件夹是存放用户资源的地方。 里面的_posts 文件夹是存放自己写的<strong>markdown的md文件</strong>。Markdown 和 HTML 文件会被hexo解析并放到 public 文件夹，而其他文件会被拷贝进public文件中的.每次解析后并添加的public文件夹里的css,js ,index.html就是最重要的东西。我每次都把他拷进github同步的文件夹名为quzhanlei.github.io的文件夹中。</p>
+<p>–</p>
+<h2 id="3-新建文章"><a href="#3-新建文章" class="headerlink" title="3.新建文章"></a>3.新建文章</h2><p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来</p>
+<ul>
+<li>新建文章，生成的md文件就在source文件下的_posts的文件夹里。<strong>然后就可以通过markdown软件进行操作</strong>。</li>
+<li>生成静态文件，就是生成public文件夹的东西</li>
+<li>发布草稿（一般不用）</li>
+<li>启动本地服务器。默认情况下，访问网址为：<a href="http://localhost:4000/。" target="_blank" rel="external">http://localhost:4000/。</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;    </span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>每次新建文章之前先：<br>清除缓存文件 (db.json) 和已生成的静态文件 (public)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  hexo clean</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-部署网站到github服务器"><a href="#4-部署网站到github服务器" class="headerlink" title="4.部署网站到github服务器"></a>4.部署网站到github服务器</h2><p>之后部署网站之前先在_config.yml添加.<strong>键值之间一定要有空格</strong>。</p>
+<p>deploy:<br>type: git<br>repo: <a href="https://github.com/quzhanlei/quzhanlei.github.io.git" target="_blank" rel="external">https://github.com/quzhanlei/quzhanlei.github.io.git</a><br>branch: master<br> message:</p>
+<p>部署到服务器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-多次发表文章"><a href="#5-多次发表文章" class="headerlink" title="5.多次发表文章"></a>5.多次发表文章</h2><p>首先通过markdown制作md文件，模式跟其他md文件一样。存到source文件下的_posts的文件夹下。<br>然后在自己folder文件夹neededfile下执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/27/Markdown编辑器学习/" rel="next" title="Markdown编辑器学习">
+                <i class="fa fa-chevron-left"></i> Markdown编辑器学习
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#因此给自己定下规矩："><span class="nav-number">1.</span> <span class="nav-text">因此给自己定下规矩：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置安装开始之前："><span class="nav-number">2.</span> <span class="nav-text">配置安装开始之前：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装任何环境及软件的基本方法"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装任何环境及软件的基本方法:</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装："><span class="nav-number"></span> <span class="nav-text">1.安装：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提："><span class="nav-number"></span> <span class="nav-text">安装前提：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装github"><span class="nav-number"></span> <span class="nav-text">安装github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装note-js"><span class="nav-number"></span> <span class="nav-text">安装note.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装markdown"><span class="nav-number"></span> <span class="nav-text">安装markdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo"><span class="nav-number"></span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-建站"><span class="nav-number"></span> <span class="nav-text">2.建站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-新建文章"><span class="nav-number"></span> <span class="nav-text">3.新建文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-部署网站到github服务器"><span class="nav-number"></span> <span class="nav-text">4.部署网站到github服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-多次发表文章"><span class="nav-number"></span> <span class="nav-text">5.多次发表文章</span></a></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
